@@ -1,0 +1,19 @@
+apiVersion: capabilities.3scale.net/v1alpha1
+kind: Tenant
+metadata:
+ name: tenant1
+ namespace: default
+spec:
+ email: tenant1@gmail.com
+ masterCredentialsRef:
+   name: system-seed
+   namespace: default
+ organizationName: tenant1
+ passwordCredentialsRef:
+   name: tenant1
+   namespace: default
+ systemMasterUrl: 'someURL'
+ tenantSecretRef:
+   name: tenant1
+   namespace: default
+ username: tenant1
