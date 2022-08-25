@@ -5,4 +5,4 @@ metadata:
   namespace: openshift-marketplace
 spec:
   sourceType: grpc
-  image: quay.io/mstoklus/managed-api-index:1.27.0
+  image: quay.io/mstoklus/managed-api-service-index:1.29.0
