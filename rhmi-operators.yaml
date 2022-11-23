@@ -1,8 +1,0 @@
-apiVersion: operators.coreos.com/v1alpha1
-kind: CatalogSource
-metadata:
-  name: rhmi-operators
-  namespace: openshift-marketplace
-spec:
-  sourceType: grpc
-  image: quay.io/mstoklus/managed-api-service-index:1.25.0
