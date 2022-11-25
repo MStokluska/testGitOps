@@ -12,7 +12,7 @@ spec:
  passwordCredentialsRef:
    name: tenant1
    namespace: redhat-rhoam-3scale
- systemMasterUrl: 'someURL'
+ systemMasterUrl: $(test-env)
  tenantSecretRef:
    name: tenant1
    namespace: redhat-rhoam-3scale
