@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: alerting-stage
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: redhat-rhoam-observability
+    server: 'https://kubernetes.default.svc'
+  project: alerts-stage
+  source:
+    path: ./alerting/stage
+    repoURL: 'https://github.com/MStokluska/testGitOps'
+    targetRevision: main
