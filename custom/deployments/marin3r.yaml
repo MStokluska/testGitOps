@@ -1,0 +1,9 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: marin3r-instance
+spec:
+  template:
+    spec:
+      containers:
+          image: 'quay.io/3scale/marin3r:v0.11.0'
