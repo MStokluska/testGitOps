@@ -1,0 +1,9 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    integreatly: 'yes'
+    monitoring-key: middleware
+# Kustomize will fail without providing namespace and name
+  namespace: not-important
+  name: not-important
