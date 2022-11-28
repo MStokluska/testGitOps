@@ -6,4 +6,5 @@ spec:
   template:
     spec:
       containers:
+        - args:
           image: 'quay.io/3scale/marin3r:v0.11.0'
