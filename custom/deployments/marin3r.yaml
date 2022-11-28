@@ -3,6 +3,12 @@ apiVersion: apps/v1
 metadata:
   name: marin3r-instance
 spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: discovery-service
+      app.kubernetes.io/instance: instance
+      app.kubernetes.io/managed-by: marin3r-operator
+      app.kubernetes.io/name: marin3r
   template:
     spec:
       containers:
