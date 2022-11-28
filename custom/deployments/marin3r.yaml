@@ -1,17 +1,14 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: marin3r-instance
+  name: ratelimit
+  namespace: redhat-rhoam-marin3r
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/component: discovery-service
-      app.kubernetes.io/instance: instance
-      app.kubernetes.io/managed-by: marin3r-operator
-      app.kubernetes.io/name: marin3r
+      app: ratelimit
   template:
     spec:
       containers:
-        - image: 'quay.io/3scale/marin3r:v0.11.0'
-          name: marin3r
-        
+        - name: ratelimit
+          image: 'quay.io/3scale/limitador:0.5.1'
