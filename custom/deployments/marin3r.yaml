@@ -7,4 +7,5 @@ spec:
     spec:
       containers:
         - args:
+          name: marin3r
           image: 'quay.io/3scale/marin3r:v0.11.0'
