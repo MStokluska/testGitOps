@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: alerting-stable
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: redhat-rhoam-observability
+    server: 'https://kubernetes.default.svc'
+  project: alerts-stable
+  source:
+    path: ./alerting/stable
+    repoURL: 'https://github.com/MStokluska/testGitOps'
+    targetRevision: main
